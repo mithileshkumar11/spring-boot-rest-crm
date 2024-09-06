@@ -12,7 +12,7 @@ spring.datasource.password=root
 spring.datasource.url=jdbc:postgresql://localhost:5433/crmdb 
 
 # APIs
-# CREATE USER
+# APIs CREATE USER
 
 curl --location 'http://localhost:8080/api/v1/auth/signup' \
 --header 'Content-Type: application/json' \
@@ -25,7 +25,7 @@ curl --location 'http://localhost:8080/api/v1/auth/signup' \
 }'
 
 
-# LOGIN USER 
+# APIs LOGIN USER 
 curl --location 'http://localhost:8080/api/v1/auth/signin' \
 --header 'Content-Type: application/json' \
 --data-raw '{
