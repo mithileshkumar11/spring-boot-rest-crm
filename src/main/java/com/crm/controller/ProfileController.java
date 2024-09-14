@@ -14,7 +14,7 @@ import com.crm.repository.UserRepository;
 import com.crm.service.CurrentLoggedInUserService;
 
 @RestController
-@RequestMapping("/profile")
+@RequestMapping("/api/profile")
 public class ProfileController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class ProfileController {
     @Autowired
     private CurrentLoggedInUserService currentLoggedInUserService;
 
-    @GetMapping
+    @GetMapping("/getProfile")
     public User getProfile() {
         return userRepository.findByEmail(currentLoggedInUserService.getCurrentUserName()).get();
     }
